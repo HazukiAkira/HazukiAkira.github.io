@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazuki Akira | Portfolio</title>
+    <title>Hazuki Akira | Accounting Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -16,28 +22,25 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
                     },
                     colors: {
                         beige: {
-                            50: '#FAF8F5',
-                            100: '#F5F0EB',
-                            200: '#EAE1D8',
-                            300: '#DCD0C2',
-                            400: '#CBB8A2',
-                            500: '#B89F83',
-                            600: '#997F65',
-                            700: '#75604C',
-                            800: '#524335',
-                            900: '#332A22',
+                            50: '#FAF7F2',
+                            100: '#F4EFEA',
+                            200: '#E8DFD5',
+                            300: '#D8C9B9',
+                            400: '#C4AE99',
+                            500: '#A67B5B',
+                            600: '#8C6D53',
+                            700: '#6E523C',
+                            800: '#4F3A2B',
+                            900: '#32241A',
                         },
                         charcoal: {
-                            DEFAULT: '#2D2B2A',
-                            muted: '#5C5855',
-                            light: '#8C8681',
-                        },
-                        sand: {
-                            accent: '#C5A880',
-                            soft: '#EFE8E1',
+                            DEFAULT: '#2C2C2C',
+                            muted: '#4A4A4A',
+                            light: '#737373',
                         }
                     }
                 }
@@ -47,120 +50,126 @@
 
     <style>
         body {
-            background-color: #FAF8F5;
-            color: #2D2B2A;
+            background-color: #FAF7F2;
+            color: #2C2C2C;
         }
-        .beige-glass {
-            background: rgba(245, 240, 235, 0.85);
+        .glass-nav {
+            background: rgba(250, 247, 242, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(220, 208, 194, 0.6);
+            border: 1px solid rgba(232, 223, 213, 0.7);
         }
-        .beige-card {
+        .soft-card {
             background-color: #FFFFFF;
-            border: 1px solid #EAE1D8;
-            box-shadow: 0 4px 20px -2px rgba(82, 67, 53, 0.05);
+            border: 1px solid #E8DFD5;
+            box-shadow: 0 4px 20px -2px rgba(79, 58, 43, 0.03);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .beige-card:hover {
+        .soft-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px -4px rgba(82, 67, 53, 0.1);
-            border-color: #CBB8A2;
+            box-shadow: 0 12px 28px -4px rgba(79, 58, 43, 0.08);
+            border-color: #C4AE99;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #FAF8F5;
+            background: #FAF7F2;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #DCD0C2;
+            background: #D8C9B9;
             border-radius: 9999px;
         }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-beige-300 selection:text-charcoal custom-scrollbar">
+<body class="font-sans antialiased selection:bg-beige-200 selection:text-charcoal custom-scrollbar">
 
     <header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 transition-all duration-300">
-        <nav class="max-w-6xl mx-auto flex items-center justify-between beige-glass rounded-2xl px-6 py-3 shadow-sm">
-            <a href="#hero" class="text-lg font-bold tracking-tight text-charcoal hover:text-beige-700 transition-colors">
-                HAZUKI AKIRA<span class="text-beige-500 font-normal"> | Accounting</span>
+        <nav class="max-w-6xl mx-auto flex items-center justify-between glass-nav rounded-2xl px-6 py-3.5 shadow-sm">
+            <a href="#hero" class="text-lg font-bold tracking-tight text-charcoal hover:text-beige-600 transition-colors">
+                HAZUKI AKIRA <span class="font-normal text-xs uppercase tracking-widest text-beige-600 ml-1 hidden sm:inline-block">| Rutgers Accounting</span>
             </a>
             
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-charcoal-muted">
-                <a href="#about" class="hover:text-beige-800 transition-colors">About</a>
-                <a href="#skills" class="hover:text-beige-800 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-beige-800 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-beige-800 transition-colors">Experience</a>
-                <a href="#github-guide" class="hover:text-beige-800 transition-colors text-beige-700 font-semibold"><i class="fa-brands fa-github mr-1"></i> Deployment Guide</a>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-wider text-charcoal-muted">
+                <a href="#about" class="hover:text-beige-700 transition-colors">About</a>
+                <a href="#skills" class="hover:text-beige-700 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-beige-700 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-beige-700 transition-colors">Contact</a>
             </div>
 
             <div class="flex items-center space-x-3">
-                <a href="resume.pdf" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-xl bg-beige-800 text-beige-50 hover:bg-beige-900 transition-all shadow-sm flex items-center gap-2">
-                    <i class="fa-solid fa-file-pdf"></i> Resume
+                <a href="resume.pdf" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-xl bg-beige-700 text-beige-50 hover:bg-beige-800 transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf"></i> Resume PDF
                 </a>
-                <button id="mobileMenuBtn" class="md:hidden text-charcoal p-2 focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl"></i>
+                <button id="mobileMenuBtn" class="md:hidden text-charcoal p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </nav>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-2 beige-glass rounded-2xl p-5 shadow-lg flex flex-col space-y-3 text-sm">
+        <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-2 glass-nav rounded-2xl p-5 shadow-lg flex flex-col space-y-3 text-sm font-medium">
             <a href="#about" class="py-2 hover:text-beige-700 border-b border-beige-200">About</a>
             <a href="#skills" class="py-2 hover:text-beige-700 border-b border-beige-200">Skills</a>
             <a href="#projects" class="py-2 hover:text-beige-700 border-b border-beige-200">Projects</a>
-            <a href="#experience" class="py-2 hover:text-beige-700 border-b border-beige-200">Experience</a>
-            <a href="#github-guide" class="py-2 text-beige-800 font-semibold">GitHub Setup Guide</a>
+            <a href="#contact" class="py-2 hover:text-beige-700">Contact</a>
         </div>
     </header>
 
-    <main class="pt-28 pb-16 px-6 md:px-12 max-w-6xl mx-auto space-y-24">
+    <main class="pt-28 pb-16 px-6 md:px-12 max-w-6xl mx-auto space-y-20">
 
-        <section id="hero" class="scroll-mt-32">
-            <div class="beige-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <!-- HERO / ABOUT SECTION -->
+        <section id="about" class="scroll-mt-32">
+            <div class="soft-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                     
                     <!-- Headshot Image Container -->
-                    <div class="md:col-span-4 flex justify-center">
+                    <div class="md:col-span-5 lg:col-span-4 flex justify-center">
                         <div class="relative group">
-                            <div class="absolute -inset-1 bg-gradient-to-r from-beige-300 to-beige-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-                            <div class="relative w-48 h-60 md:w-56 md:h-72 rounded-2xl overflow-hidden border-2 border-beige-200 shadow-md">
+                            <div class="absolute -inset-1 bg-gradient-to-tr from-beige-300 via-beige-400 to-beige-200 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                            <div class="relative w-52 h-64 md:w-60 md:h-72 rounded-2xl overflow-hidden border-2 border-white shadow-md">
                                 <img src="headshot.jpg" 
-                                     alt="Hazuki Akira Headshot" 
+                                     alt="Hazuki Akira" 
                                      class="w-full h-full object-cover object-top"
-                                     onerror="this.onerror=null; this.src='https://placehold.co/400x500/EAE1D8/332A22?text=Hazuki+Akira';">
+                                     onerror="this.onerror=null; this.src='https://placehold.co/400x500/F4EFEA/4F3A2B?text=Hazuki+Akira';">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Personal Info & One-Sentence Statement -->
-                    <div class="md:col-span-8 space-y-5 text-left">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-beige-100 border border-beige-300 text-xs font-semibold text-beige-800">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Rutgers University • B.S. in Accounting (Expected May 2027)
-                        </div>
+                    <!-- Intro Info & Personal Statement -->
+                    <div class="md:col-span-7 lg:col-span-8 space-y-6 text-left">
+                        <div class="space-y-2">
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-beige-100 border border-beige-200 text-xs font-semibold text-beige-700">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Accounting Student • Rutgers Business School
+                            </div>
 
-                        <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-charcoal">
-                            Hazuki Akira
-                        </h1>
-
-                        <!-- RUBRIC REQUIREMENT 1: Clear 1-sentence personal statement -->
-                        <div class="p-5 rounded-2xl bg-beige-50 border-l-4 border-beige-500 shadow-sm">
-                            <p class="text-xs uppercase font-bold tracking-wider text-beige-700 mb-1">Personal Statement</p>
-                            <p class="text-base md:text-lg font-medium text-charcoal leading-relaxed">
-                                Detail-oriented B.S. Accounting student at Rutgers University specializing in financial modeling, budget oversight, and tax compliance, with proven leadership in student organization treasury and corporate case competitions.
+                            <h1 class="text-3xl md:text-5xl font-serif font-bold text-charcoal tracking-tight">
+                                Hazuki Akira
+                            </h1>
+                            <p class="text-xs uppercase font-semibold text-beige-600 tracking-wider">
+                                New Brunswick, NJ • Expected May 2027
                             </p>
                         </div>
 
-                        <div class="flex flex-wrap gap-4 pt-2">
-                            <a href="mailto:hazukiakira51@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-beige-800 text-beige-50 hover:bg-beige-900 transition-colors text-sm font-semibold shadow-sm">
-                                <i class="fa-regular fa-envelope"></i> Contact Me
+                        <!-- Rubric Requirement 1: Clear 1-sentence personal statement -->
+                        <div class="p-5 md:p-6 rounded-2xl bg-beige-50/80 border-l-4 border-beige-500 shadow-sm">
+                            <p class="text-[11px] uppercase font-bold tracking-widest text-beige-700 mb-1.5">
+                                Professional Summary
+                            </p>
+                            <p class="text-base md:text-lg font-normal text-charcoal leading-relaxed font-sans">
+                                As a detail-oriented Accounting student at Rutgers University with leadership experience in financial management and analytical modeling, I specialize in combining rigorous data analysis with strategic financial oversight to drive organizational value.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 pt-1">
+                            <a href="mailto:hazukiakira51@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-beige-700 text-beige-50 hover:bg-beige-800 transition-colors text-xs font-semibold shadow-sm">
+                                <i class="fa-regular fa-envelope"></i> Email Me
                             </a>
-                            <a href="tel:6097849670" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-beige-100 hover:bg-beige-200 text-charcoal border border-beige-300 transition-colors text-sm font-semibold">
+                            <a href="tel:6097849670" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-beige-100 hover:bg-beige-200 text-charcoal border border-beige-200 transition-colors text-xs font-semibold">
                                 <i class="fa-solid fa-phone text-beige-600"></i> (609) 784-9670
                             </a>
-                            <a href="https://linkedin.com" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-beige-100 hover:bg-beige-200 text-beige-800 border border-beige-300 transition-colors">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                            <a href="https://linkedin.com" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-beige-100 hover:bg-beige-200 text-beige-800 border border-beige-200 transition-colors" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
                             </a>
                         </div>
                     </div>
@@ -168,159 +177,186 @@
             </div>
         </section>
 
+        <!-- SKILLS SECTION -->
         <section id="skills" class="scroll-mt-28 space-y-6">
             <div class="flex items-center justify-between border-b border-beige-200 pb-3">
                 <div>
-                    <h2 class="text-2xl font-bold text-charcoal">Skills Showcase</h2>
-                    <p class="text-xs text-charcoal-muted mt-1">Technical proficiency, analytical tools, and language capabilities</p>
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-charcoal">Skills Showcase</h2>
+                    <p class="text-xs text-charcoal-light mt-1">Technical proficiency, analytical tools, and core capabilities</p>
                 </div>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-beige-200 text-beige-800">Accounting & Finance</span>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-beige-100 text-beige-700 border border-beige-200">Competencies</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Technical Skills -->
-                <div class="beige-card rounded-2xl p-6 space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-lg font-bold">
-                        <i class="fa-solid fa-calculator"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-charcoal">Technical & Software</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Microsoft Excel (PivotTables, XLOOKUP)</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">QuickBooks</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Financial Modeling</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Tableau</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Microsoft Office Suite</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Google Workspace & Slack</span>
-                    </div>
-                </div>
-
-                <!-- Core Competencies -->
-                <div class="beige-card rounded-2xl p-6 space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-lg font-bold">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-charcoal">Accounting & Analytics</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Budget & Financial Oversight</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Cash Reconciliation</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Tax Compliance</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Ledger Reconciliation</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Forensic Accounting Focus</span>
-                        <span class="px-3 py-1.5 bg-beige-50 border border-beige-200 rounded-lg text-xs font-semibold text-charcoal">Auditing Principles</span>
-                    </div>
-                </div>
-
-                <!-- Languages & Soft Skills -->
-                <div class="beige-card rounded-2xl p-6 space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-lg font-bold">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-charcoal">Languages & Focus</h3>
-                    <div class="space-y-3 text-xs">
-                        <div>
-                            <p class="font-semibold text-beige-800 mb-1">Languages</p>
-                            <p class="text-charcoal-muted"><strong>Mongolian:</strong> Native/Fluent | <strong>Russian:</strong> Advanced | <strong>English:</strong> Fluent</p>
+            <!-- Rubric Requirement 2: Skills Showcase in Organized Format -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Category 1: Technical & Financial Tools -->
+                <div class="soft-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-base mb-3">
+                            <i class="fa-solid fa-laptop-code"></i>
                         </div>
-                        <div class="pt-2 border-t border-beige-200">
-                            <p class="font-semibold text-beige-800 mb-1">Career Interests</p>
-                            <p class="text-charcoal-muted">Tax Compliance, Financial Consulting, Auditing, Corporate Valuation.</p>
+                        <h3 class="font-bold text-base text-charcoal mb-3">Technical & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Microsoft Excel (PivotTables, VLOOKUP/XLOOKUP)</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">QuickBooks</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Tableau</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Data Modeling & Analysis</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">POS Cash Reconciliation</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Category 2: Core Financial Focus -->
+                <div class="soft-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-base mb-3">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-charcoal mb-3">Core Financial Focus</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Tax Compliance</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Forensic Accounting</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Financial Consulting</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Auditing Principles</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Budgeting & Oversight</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Revenue Growth Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Soft & Professional Skills -->
+                <div class="soft-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-base mb-3">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-charcoal mb-3">Professional Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Cross-Functional Teamwork</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Corporate Communication</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Client Presentation</span>
+                            <span class="px-2.5 py-1 bg-beige-50 border border-beige-200 rounded-lg text-xs text-charcoal">Resource Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Languages & Education -->
+                <div class="soft-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-beige-100 text-beige-700 flex items-center justify-center text-base mb-3">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-charcoal mb-3">Languages & Focus</h3>
+                        <div class="space-y-3 text-xs">
+                            <div>
+                                <p class="font-semibold text-beige-700 uppercase text-[10px] tracking-wider mb-1">Languages</p>
+                                <p class="text-charcoal-muted"><strong>Mongolian:</strong> Native<br><strong>Russian:</strong> Advanced<br><strong>English:</strong> Fluent</p>
+                            </div>
+                            <div class="pt-2 border-t border-beige-200">
+                                <p class="font-semibold text-beige-700 uppercase text-[10px] tracking-wider mb-1">Degree Program</p>
+                                <p class="text-charcoal-muted">B.S. in Accounting<br>Rutgers University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="scroll-mt-28 space-y-6">
             <div class="flex items-center justify-between border-b border-beige-200 pb-3">
                 <div>
-                    <h2 class="text-2xl font-bold text-charcoal">Key Projects & Case Studies</h2>
-                    <p class="text-xs text-charcoal-muted mt-1">Highlights of leadership, valuation modeling, and financial oversight</p>
+                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-charcoal">Featured Projects & Case Studies</h2>
+                    <p class="text-xs text-charcoal-light mt-1">Key highlights of leadership, valuation modeling, and financial oversight</p>
                 </div>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-beige-200 text-beige-800">3 Projects</span>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-beige-100 text-beige-700 border border-beige-200">3 Projects</span>
             </div>
 
+            <!-- Rubric Requirement 3: Projects Section with 2-3 relevant projects -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Project 1: Verizon Case Competition -->
-                <div class="beige-card rounded-2xl p-6 flex flex-col justify-between">
+                <div class="soft-card rounded-2xl p-6 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">
-                                <i class="fa-solid fa-trophy mr-1"></i> Winner (Dec 2025)
+                            <span class="px-2.5 py-1 rounded-md bg-amber-100/80 border border-amber-200 text-amber-900 text-[11px] font-bold">
+                                <i class="fa-solid fa-trophy text-amber-600 mr-1"></i> Winner (Dec 2025)
                             </span>
-                            <span class="text-xs text-charcoal-light">Verizon x RBS</span>
+                            <span class="text-[11px] text-charcoal-light font-medium">Verizon x RBS</span>
                         </div>
-                        <h3 class="text-lg font-bold text-charcoal leading-snug">
-                            Verizon x RBS Go-To-Market Business Case Competition
+                        <h3 class="text-base font-bold text-charcoal leading-snug">
+                            Verizon x RBS GTM Business Case Competition
                         </h3>
                         <p class="text-xs text-charcoal-muted leading-relaxed">
-                            Developed a multi-year go-to-market strategy for Verizon executives. Built financial growth projection models and conducted risk analyses for proposed entry points.
+                            Developed a comprehensive go-to-market strategy, leveraging secondary market research and financial modeling to project multi-year revenue growth. Pitched directly to Verizon executives.
                         </p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Financial Modeling</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Valuation</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Executive Pitch</span>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Financial Modeling</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Valuation</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Executive Pitch</span>
                         </div>
                     </div>
-                    <div class="pt-6 border-t border-beige-100 mt-4">
+                    <div class="pt-5 border-t border-beige-100 mt-5">
                         <button onclick="openModal('project1')" class="w-full py-2 bg-beige-100 hover:bg-beige-200 text-beige-900 font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2">
-                            View Case Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            View Project Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Project 2: Rutgers Transfer Student Association Treasury -->
-                <div class="beige-card rounded-2xl p-6 flex flex-col justify-between">
+                <!-- Project 2: Rutgers TSA Treasury -->
+                <div class="soft-card rounded-2xl p-6 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-beige-200 text-beige-800 text-xs font-bold">
+                            <span class="px-2.5 py-1 rounded-md bg-beige-100 border border-beige-200 text-beige-800 text-[11px] font-bold">
                                 Leadership Role
                             </span>
-                            <span class="text-xs text-charcoal-light">Rutgers TSA</span>
+                            <span class="text-[11px] text-charcoal-light font-medium">Rutgers TSA</span>
                         </div>
-                        <h3 class="text-lg font-bold text-charcoal leading-snug">
-                            Rutgers TSA Financial Oversight & Budget Management
+                        <h3 class="text-base font-bold text-charcoal leading-snug">
+                            Transfer Student Association Financial Oversight
                         </h3>
                         <p class="text-xs text-charcoal-muted leading-relaxed">
-                            Administered operating budget for university-funded student organization. Executed monthly account ledger reconciliations and audited funding requests to optimize campus activity spend.
+                            Managed annual operating budget, performed monthly account ledger reconciliations, and audited funding requests to optimize campus event spending and ensure compliance.
                         </p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Ledger Reconciliation</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Budgeting</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Compliance</span>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Budgeting</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Reconciliation</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Compliance</span>
                         </div>
                     </div>
-                    <div class="pt-6 border-t border-beige-100 mt-4">
+                    <div class="pt-5 border-t border-beige-100 mt-5">
                         <button onclick="openModal('project2')" class="w-full py-2 bg-beige-100 hover:bg-beige-200 text-beige-900 font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2">
-                            View Case Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            View Project Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Project 3: Braven Accelerator Consulting -->
-                <div class="beige-card rounded-2xl p-6 flex flex-col justify-between">
+                <div class="soft-card rounded-2xl p-6 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-beige-200 text-beige-800 text-xs font-bold">
+                            <span class="px-2.5 py-1 rounded-md bg-beige-100 border border-beige-200 text-beige-800 text-[11px] font-bold">
                                 Fellow Project
                             </span>
-                            <span class="text-xs text-charcoal-light">Braven</span>
+                            <span class="text-[11px] text-charcoal-light font-medium">Braven</span>
                         </div>
-                        <h3 class="text-lg font-bold text-charcoal leading-snug">
-                            Braven Accelerator Corporate Consulting Initiative
+                        <h3 class="text-base font-bold text-charcoal leading-snug">
+                            Braven Accelerator Experiential Business Consulting
                         </h3>
                         <p class="text-xs text-charcoal-muted leading-relaxed">
-                            Semester-long experiential project focused on data-driven problem solving, quantitative analysis, and presenting corporate communication strategies to industry stakeholders.
+                            Completed a semester-long experiential program focused on data-driven problem solving, analyzing financial/operational data for corporate communication strategies.
                         </p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Data Analytics</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Consulting</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">Problem Solving</span>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Data Analytics</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Consulting</span>
+                            <span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 rounded text-beige-800">Strategy</span>
                         </div>
                     </div>
-                    <div class="pt-6 border-t border-beige-100 mt-4">
+                    <div class="pt-5 border-t border-beige-100 mt-5">
                         <button onclick="openModal('project3')" class="w-full py-2 bg-beige-100 hover:bg-beige-200 text-beige-900 font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2">
-                            View Case Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            View Project Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
                     </div>
                 </div>
@@ -328,95 +364,39 @@
             </div>
         </section>
 
-        <section id="experience" class="scroll-mt-28 space-y-6">
-            <div class="flex items-center justify-between border-b border-beige-200 pb-3">
-                <div>
-                    <h2 class="text-2xl font-bold text-charcoal">Experience & Leadership</h2>
-                    <p class="text-xs text-charcoal-muted mt-1">Detailed history of professional, academic, and campus roles</p>
-                </div>
-            </div>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="scroll-mt-28">
+            <div class="soft-card rounded-3xl p-8 md:p-10 border border-beige-300 bg-gradient-to-br from-white via-beige-50 to-beige-100/50">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7 space-y-3">
+                        <span class="text-xs font-semibold uppercase tracking-widest text-beige-600">Get In Touch</span>
+                        <h2 class="text-2xl md:text-3xl font-serif font-bold text-charcoal">Connect with Hazuki Akira</h2>
+                        <p class="text-xs md:text-sm text-charcoal-muted leading-relaxed">
+                            Currently open to internship opportunities, full-time roles, and networking in accounting, tax compliance, and corporate financial advisory.
+                        </p>
+                    </div>
 
-            <div class="space-y-4">
-                <!-- Experience Item 1 -->
-                <div class="beige-card rounded-2xl p-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                        <div>
-                            <h3 class="font-bold text-base text-charcoal">Treasurer</h3>
-                            <p class="text-xs text-beige-700 font-semibold">Rutgers University Transfer Student Association</p>
-                        </div>
-                        <span class="text-xs px-3 py-1 bg-beige-100 text-beige-800 rounded-full font-medium w-fit">Current</span>
-                    </div>
-                    <ul class="text-xs text-charcoal-muted space-y-1.5 list-disc list-inside">
-                        <li>Administer annual operating budget and manage allocation of university funds in strict compliance with financial policies.</li>
-                        <li>Reconcile monthly account ledgers, track expense reports, and prepare term-end financial statements for board members.</li>
-                        <li>Audit funding requests for campus events to reduce unnecessary spending and maximize resource utilization.</li>
-                    </ul>
-                </div>
+                    <div class="md:col-span-5 flex flex-col gap-3">
+                        <a href="mailto:hazukiakira51@gmail.com" class="p-3.5 rounded-xl bg-white border border-beige-200 hover:border-beige-400 transition-colors flex items-center gap-3 text-xs font-medium text-charcoal shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-beige-100 text-beige-700 flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <span class="truncate">hazukiakira51@gmail.com</span>
+                        </a>
 
-                <!-- Experience Item 2 -->
-                <div class="beige-card rounded-2xl p-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                        <div>
-                            <h3 class="font-bold text-base text-charcoal">Cashier & Operations</h3>
-                            <p class="text-xs text-beige-700 font-semibold">The Funplex • Mount Laurel, NJ</p>
-                        </div>
-                        <span class="text-xs px-3 py-1 bg-beige-100 text-beige-800 rounded-full font-medium w-fit">Apr 2023 - Present</span>
-                    </div>
-                    <ul class="text-xs text-charcoal-muted space-y-1.5 list-disc list-inside">
-                        <li>Maintained 100% accuracy in daily POS balances and cash handling for daily transactions exceeding $3,000.</li>
-                        <li>Received "Most Improved Employee" (2023) award for operational dependability and service precision.</li>
-                    </ul>
-                </div>
+                        <a href="tel:6097849670" class="p-3.5 rounded-xl bg-white border border-beige-200 hover:border-beige-400 transition-colors flex items-center gap-3 text-xs font-medium text-charcoal shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-beige-100 text-beige-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span>(609) 784-9670</span>
+                        </a>
 
-                <!-- Experience Item 3 -->
-                <div class="beige-card rounded-2xl p-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                        <div>
-                            <h3 class="font-bold text-base text-charcoal">Russian Language Peer Tutor</h3>
-                            <p class="text-xs text-beige-700 font-semibold">Rutgers University</p>
+                        <div class="p-3.5 rounded-xl bg-white border border-beige-200 flex items-center gap-3 text-xs font-medium text-charcoal shadow-sm">
+                            <div class="w-8 h-8 rounded-lg bg-beige-100 text-beige-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>New Brunswick, NJ</span>
                         </div>
-                        <span class="text-xs px-3 py-1 bg-beige-100 text-beige-800 rounded-full font-medium w-fit">Sept 2025 - May 2026</span>
-                    </div>
-                    <ul class="text-xs text-charcoal-muted space-y-1.5 list-disc list-inside">
-                        <li>Evaluated student performance across grammar, vocabulary, and customized curriculum to improve target metrics.</li>
-                        <li>Programmed interactive learning resources in collaboration with faculty to increase student retention.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="github-guide" class="scroll-mt-28">
-            <div class="beige-card rounded-3xl p-8 border-2 border-beige-300 relative bg-gradient-to-br from-white to-beige-50">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-xl bg-beige-800 text-beige-50 flex items-center justify-center font-bold">
-                        <i class="fa-brands fa-github text-xl"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-xl font-bold text-charcoal">GitHub Pages Deployment Instructions</h2>
-                        <p class="text-xs text-beige-700 font-medium">Follow these steps to deploy and earn 10/10 on the assignment rubric</p>
-                    </div>
-                </div>
-
-                <div class="space-y-4 text-xs text-charcoal-muted border-t border-beige-200 pt-4">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="p-4 rounded-xl bg-white border border-beige-200">
-                            <span class="font-bold text-beige-800 text-sm">Step 1: Create Repository</span>
-                            <p class="mt-1">Log into GitHub, click <strong>New Repository</strong>, name it <code>portfolio</code> or <code>hazuki-akira-portfolio</code>, and make sure it is set to <strong>Public</strong>.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-white border border-beige-200">
-                            <span class="font-bold text-beige-800 text-sm">Step 2: Upload 3 Files</span>
-                            <p class="mt-1">Upload exactly three files into the repository root:
-                            <br>1. <code>index.html</code> (this file)
-                            <br>2. <code>headshot.jpg</code> (your photo)
-                            <br>3. <code>resume.pdf</code> (your resume)</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-white border border-beige-200">
-                            <span class="font-bold text-beige-800 text-sm">Step 3: Enable Pages</span>
-                            <p class="mt-1">Go to <strong>Settings</strong> &gt; <strong>Pages</strong>. Under <em>Build and deployment</em>, set Source to <strong>Deploy from a branch</strong>, select <code>main</code> / <code>root</code>, and click <strong>Save</strong>.</p>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-beige-100 rounded-xl text-beige-800 text-center font-medium">
-                        <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Your live URL will be: <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code>
                     </div>
                 </div>
             </div>
@@ -424,20 +404,22 @@
 
     </main>
 
-    <footer class="border-t border-beige-200 bg-beige-100/50 py-8 text-center text-xs text-charcoal-muted">
+    <!-- FOOTER -->
+    <footer class="border-t border-beige-200 bg-white/60 py-8 text-center text-xs text-charcoal-light">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>© 2026 Hazuki Akira • B.S. Accounting Student at Rutgers University</p>
-            <div class="flex items-center space-x-4">
-                <a href="mailto:hazukiakira51@gmail.com" class="hover:text-beige-800">Email</a>
-                <a href="https://linkedin.com" target="_blank" class="hover:text-beige-800">LinkedIn</a>
-                <a href="resume.pdf" target="_blank" class="hover:text-beige-800">Resume PDF</a>
+            <p>© 2026 Hazuki Akira • Rutgers Business School Accounting Student</p>
+            <div class="flex items-center space-x-6">
+                <a href="mailto:hazukiakira51@gmail.com" class="hover:text-beige-800 transition-colors">Email</a>
+                <a href="tel:6097849670" class="hover:text-beige-800 transition-colors">Phone</a>
+                <a href="resume.pdf" target="_blank" class="hover:text-beige-800 transition-colors">Resume PDF</a>
             </div>
         </div>
     </footer>
 
+    <!-- INTERACTIVE MODAL FOR PROJECTS -->
     <div id="modalOverlay" class="fixed inset-0 bg-charcoal/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div id="modalContent" class="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-beige-200 text-charcoal relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-charcoal-light hover:text-charcoal w-8 h-8 rounded-full bg-beige-100 flex items-center justify-center">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-charcoal-light hover:text-charcoal w-8 h-8 rounded-full bg-beige-100 flex items-center justify-center transition-colors" aria-label="Close modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="modalBody" class="space-y-3">
@@ -454,38 +436,48 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Project Modal Data
+        // Close mobile menu on clicking links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Detailed Project Modal Data
         const projectsData = {
             project1: {
-                title: "Verizon x RBS Go-To-Market Competition",
+                title: "Verizon x RBS GTM Case Competition",
                 tag: "1st Place Winner • Dec 2025",
-                description: "Developed a comprehensive commercial expansion and market entry strategy for Verizon corporate leadership.",
+                subtitle: "Financial Modeling & Commercial Strategy",
+                description: "Developed a comprehensive commercial expansion and go-to-market strategy for Verizon executives.",
                 details: [
                     "Constructed multi-year financial forecast models evaluating revenue growth, operating expenses, and ROI.",
-                    "Defended financial assumptions, sensitivity analyses, and risk parameters directly in front of Verizon executives.",
-                    "Collaborated in a multidisciplinary team to blend quantitative valuation with strategic positioning."
+                    "Pitched directly to Verizon executives, defending underlying financial assumptions and risk analysis.",
+                    "Leveraged secondary market research and comparative valuation models."
                 ],
                 tech: ["Excel Financial Modeling", "Valuation", "Risk Analysis", "Executive Pitch"]
             },
             project2: {
-                title: "Rutgers Transfer Student Association Treasury",
-                tag: "Executive Board Role",
+                title: "Rutgers TSA Financial Oversight",
+                tag: "Executive Leadership Role",
+                subtitle: "Operating Budget & Ledger Management",
                 description: "Responsible for full fiscal accountability and financial compliance for the university student organization.",
                 details: [
-                    "Managed annual operating budget allocation and tracked all disbursements.",
-                    "Performed monthly ledger reconciliations and presented financial summaries to the executive board.",
-                    "Audited event spending requests to eliminate unnecessary costs and reallocate savings to student initiatives."
+                    "Administered annual operating budget and managed university fund allocations.",
+                    "Reconciled monthly account ledgers and tracked expense reports to prepare financial statements.",
+                    "Audited funding requests for campus events to optimize spending and resource utilization."
                 ],
                 tech: ["Budget Oversight", "Ledger Reconciliation", "Internal Controls", "Compliance"]
             },
             project3: {
-                title: "Braven Accelerator Corporate Consulting",
+                title: "Braven Accelerator Business Consulting",
                 tag: "Fellow Project • Fall 2023",
-                description: "Experiential management consulting program centered around data-driven problem solving and business communication.",
+                subtitle: "Data Analytics & Strategic Communication",
+                description: "Semester-long experiential program focused on data-driven problem solving and business communication.",
                 details: [
                     "Analyzed client datasets to extract operational insights and pinpoint inefficiencies.",
-                    "Formulated recommendations for executive stakeholders using structured decision frameworks.",
-                    "Enhanced cross-functional teamwork, data visualization, and corporate advisory skills."
+                    "Formulated recommendations for corporate stakeholders using structured analytical frameworks.",
+                    "Enhanced cross-functional teamwork, data visualization, and professional communication."
                 ],
                 tech: ["Data Analytics", "Consulting Frameworks", "Tableau", "Strategic Advisory"]
             }
@@ -497,20 +489,21 @@
 
             const modalBody = document.getElementById('modalBody');
             modalBody.innerHTML = `
-                <span class="px-2.5 py-1 bg-beige-200 text-beige-800 font-bold text-xs rounded-md inline-block mb-1">${project.tag}</span>
-                <h3 class="text-xl font-bold text-charcoal">${project.title}</h3>
-                <p class="text-xs text-charcoal-muted">${project.description}</p>
+                <span class="px-2.5 py-1 bg-beige-100 border border-beige-200 text-beige-800 font-bold text-xs rounded-md inline-block mb-1">${project.tag}</span>
+                <h3 class="text-xl font-serif font-bold text-charcoal">${project.title}</h3>
+                <p class="text-xs font-semibold text-beige-700">${project.subtitle}</p>
+                <p class="text-xs text-charcoal-muted leading-relaxed">${project.description}</p>
                 <div class="border-t border-beige-200 pt-3 space-y-2">
-                    <p class="text-xs font-bold text-beige-800">Key Highlights:</p>
+                    <p class="text-xs font-bold text-charcoal">Key Accomplishments:</p>
                     <ul class="text-xs text-charcoal-muted space-y-1.5 list-disc list-inside">
                         ${project.details.map(d => `<li>${d}</li>`).join('')}
                     </ul>
                 </div>
                 <div class="flex flex-wrap gap-1.5 pt-2">
-                    ${project.tech.map(t => `<span class="text-[10px] font-semibold px-2 py-0.5 bg-beige-100 rounded text-beige-800">${t}</span>`).join('')}
+                    ${project.tech.map(t => `<span class="text-[10px] font-medium px-2 py-0.5 bg-beige-100 border border-beige-200 rounded text-beige-800">${t}</span>`).join('')}
                 </div>
                 <div class="pt-4 flex justify-end">
-                    <button onclick="closeModal()" class="px-4 py-2 bg-beige-800 text-beige-50 rounded-xl text-xs font-semibold hover:bg-beige-900">Close</button>
+                    <button onclick="closeModal()" class="px-4 py-2 bg-beige-700 text-beige-50 rounded-xl text-xs font-semibold hover:bg-beige-800 transition-colors">Close</button>
                 </div>
             `;
 
@@ -521,7 +514,7 @@
             document.getElementById('modalOverlay').classList.add('hidden');
         }
 
-        // Close modal on overlay click
+        // Close modal when clicking outside box
         document.getElementById('modalOverlay').addEventListener('click', (e) => {
             if (e.target === document.getElementById('modalOverlay')) {
                 closeModal();
